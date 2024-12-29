@@ -21,49 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         val obj = PostfixStackEvaluator()
 
-//        val buttonAC = binding.btnAC
-//        val screenWidth = resources.displayMetrics.widthPixels
-//        val buttonWidth = (screenWidth * 0.2).toInt()
-//        buttonAC.layoutParams.width = buttonWidth
+        // Number buttons
+        val numberButtons = listOf(binding.btn0, binding.btn1, binding.btn2, binding.btn3, binding.btn4,
+            binding.btn5, binding.btn6, binding.btn7, binding.btn8, binding.btn9)
 
-        binding.btn0.setOnClickListener {
-            binding.eTInput.text?.append("0")
-        }
-
-        binding.btn1.setOnClickListener {
-            binding.eTInput.text?.append("1")
-        }
-
-        binding.btn2.setOnClickListener {
-            binding.eTInput.text?.append("2")
-        }
-
-        binding.btn3.setOnClickListener {
-            binding.eTInput.text?.append("3")
-        }
-
-        binding.btn4.setOnClickListener {
-            binding.eTInput.text?.append("4")
-        }
-
-        binding.btn5.setOnClickListener {
-            binding.eTInput.text?.append("5")
-        }
-
-        binding.btn6.setOnClickListener {
-            binding.eTInput.text?.append("6")
-        }
-
-        binding.btn7.setOnClickListener {
-            binding.eTInput.text?.append("7")
-        }
-
-        binding.btn8.setOnClickListener {
-            binding.eTInput.text?.append("8")
-        }
-
-        binding.btn9.setOnClickListener {
-            binding.eTInput.text?.append("9")
+        for (i in 0..9) {
+            numberButtons[i].setOnClickListener {
+                binding.eTInput.text?.append(i.toString())
+            }
         }
 
         binding.btnPoint.setOnClickListener {
@@ -82,20 +47,13 @@ class MainActivity : AppCompatActivity() {
                 binding.eTInput.text?.append(")")
         }
 
-        binding.btnDivide.setOnClickListener {
-            binding.eTInput.text?.append("/")
-        }
-
-        binding.btnMultiply.setOnClickListener {
-            binding.eTInput.text?.append("×")
-        }
-
-        binding.btnMinus.setOnClickListener {
-            binding.eTInput.text?.append("-")
-        }
-
-        binding.btnPlus.setOnClickListener {
-            binding.eTInput.text?.append("+")
+        // Operator buttons
+        val operatorButtons = mapOf(
+            binding.btnDivide to "/", binding.btnMultiply to "×",
+            binding.btnMinus to "-", binding.btnPlus to "+"
+        )
+        operatorButtons.forEach { (button, operator) ->
+            button.setOnClickListener { binding.eTInput.text?.append(operator) }
         }
 
         binding.btnDel.setOnClickListener {
@@ -104,18 +62,49 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnEqual.setOnClickListener {
-
             val input = binding.eTInput.text.toString()
             val result = obj.evaluate(input)
             binding.tVResult.text = result.toString()
         }
 
         binding.btnAns.setOnClickListener {
-
             binding.eTInput.text?.clear()
             binding.eTInput.text?.append(binding.tVResult.text.toString())
+        }
 
+        // Theme toggle functionality
+        binding.btnChangeMode.setOnClickListener {
+            val isDarkMode = binding.btnChangeMode.text.toString() == "🌙"
+            toggleTheme(isDarkMode, binding)
         }
 
     }
+
+    private fun toggleTheme(isDarkMode: Boolean, binding: ActivityMainBinding) {
+        val backgroundColor = if (isDarkMode) R.color.white else R.color.black
+        val textColor = if (isDarkMode) R.color.black else R.color.white
+        val buttonBackgroundColor = if (isDarkMode) R.color.lavender else R.color.orange
+        val themeIcon = if (isDarkMode) "\uD83C\uDF1E" else "🌙"
+
+        binding.main.setBackgroundResource(backgroundColor)
+        binding.eTInput.setTextColor(getColor(textColor))
+        binding.tVResult.setTextColor(getColor(textColor))
+
+        // List of all buttons
+        val allButtons = listOf(
+            binding.btn0, binding.btn1, binding.btn2, binding.btn3, binding.btn4,
+            binding.btn5, binding.btn6, binding.btn7, binding.btn8, binding.btn9,
+            binding.btnPoint, binding.btnAC, binding.btnBracket, binding.btnDivide,
+            binding.btnMultiply, binding.btnMinus, binding.btnPlus, binding.btnDel,
+            binding.btnEqual, binding.btnAns, binding.btnChangeMode
+        )
+
+        allButtons.forEach { button ->
+            button.setTextColor(getColor(textColor))
+            button.setBackgroundColor(getColor(buttonBackgroundColor))
+        }
+
+        binding.btnChangeMode.text = themeIcon
+    }
+
 }

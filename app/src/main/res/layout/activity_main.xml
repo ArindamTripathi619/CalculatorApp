@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="6"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -21,6 +22,7 @@
             android:id="@+id/eTInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:hint="Enter input" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -31,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="Result"
         android:textSize="25sp" />
 
@@ -47,6 +50,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="AC" />
 
         <Button
@@ -54,6 +60,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="()" />
 
         <Button
@@ -61,6 +70,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="ANS" />
 
         <Button
@@ -68,6 +80,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="/" />
 
     </LinearLayout>
@@ -85,6 +100,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="7" />
 
         <Button
@@ -92,6 +110,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="8" />
 
         <Button
@@ -99,6 +120,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="9" />
 
         <Button
@@ -106,6 +130,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="×" />
 
     </LinearLayout>
@@ -123,6 +150,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="4" />
 
         <Button
@@ -130,6 +160,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="5" />
 
         <Button
@@ -137,6 +170,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="6" />
 
         <Button
@@ -144,6 +180,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="-" />
 
     </LinearLayout>
@@ -161,6 +200,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="1" />
 
         <Button
@@ -168,6 +210,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="2" />
 
         <Button
@@ -175,6 +220,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="3" />
 
         <Button
@@ -182,6 +230,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="+" />
 
     </LinearLayout>
@@ -199,6 +250,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="0" />
 
         <Button
@@ -206,6 +260,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="." />
 
         <Button
@@ -213,6 +270,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="C" />
 
         <Button
@@ -220,8 +280,30 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="=" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btnChangeMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:text="🌙"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
     </LinearLayout>
 
 </LinearLayout>
