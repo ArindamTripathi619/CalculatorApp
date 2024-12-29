@@ -13,7 +13,7 @@ A modern, intuitive calculator app built with Android's Material Design principl
 ---
 
 ## 🖼️ Screenshots
-![CalculatorApp Screenshot](app/src/res/drawable/screenshot.png)
+![CalculatorApp Screenshot](app/src/main/res/drawable/screenshot.png)
 
 ---
 
